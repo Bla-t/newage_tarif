@@ -285,8 +285,14 @@
      }
 
     function rupiah($angka){  
-
-                        $hasil_rupiah = "Rp. " . number_format($angka,2,',','.'); 
+///
+$bulat=substr($angka,-3);
+if($bulat<500)
+$akhir=$angka-$bulat;
+else
+$akhir=$angka+(1000_$bulat);
+///
+                      $hasil_rupiah = "Rp. " . number_format($angka,2,',','.'); 
                         return $hasil_rupiah; 
                       }
                       ?>
